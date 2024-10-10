@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: red;
+}
+#wrapper {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.9rem; /* 글씨 크기를 부모 기준(루트기준)으로 설정*/
+  width: 100%;
+  position: relative;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* 로그인 영역 */
+#wrapper > p#login {
+  width: 60%;
+  position: absolute;
+  top: 5px;
+  right: 20%;
+
+  font-size: 0.8em;
+  z-index: 99;
+}
+#wrapper > p#login a {
+  float: right;
+  /* color:white  */
+  display: block;
+}
+/* 로그인(4)/회원가입(3)/인스타(2)/페이스북(1) */
+#wrapper > p#login a:nth-of-type(1),
+#wrapper > p#login a:nth-of-type(1) + a {
+  /* 인스타, 페이스북의 너비와 높이를 줬다. */
+  /* width: 28px;
+  height: 28px; */
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+/* 페이스북 */
+#wrapper > p#login a:nth-of-type(1) {
+  background: url("../img/icon_sns_01.png") -200% 0; /*이미지 주소 (-)왼/오 (-)위/아래*/
+  background-size: 400%;
+}
+/* 인스타 */
+#wrapper > p#login a:nth-of-type(1) + a {
+  background: url("../img/icon_sns_01.png") -300% 0;
+  background-size: 400%;
+}
+/* 회원가입 */
+#wrapper > p#login a:nth-of-type(3)::before,
+#wrapper > p#login a:nth-of-type(3)::after {
+  content: "|";
+  margin: 10px;
+}
+
+/* desktopGnb1 (상단 네비게이션) */
+/* desktopGnb2 : 상단의 fixed black navi ->desktopGnb1 (상단 네비게이션) Scroll 시 */
+nav.desktopGnb1,
+nav.desktopGnb2 {
+  background-color: white;
+  width: 60%;
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: 20%;
+  padding: 0 20px;
+}
+nav.desktopGnb2 {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed; /*화면 상단에 고정*/
+  z-index: 99999;
+}
+nav.desktopGnb1 li {
+  float: left;
+  width: 12%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+nav.desktopGnb2 li {
+  float: left;
+  width: 12%;
+  height: 60px;
+  line-height: 60px;
+}
+nav.desktopGnb2 li:first-child {
+  position: relative;
+  left: 5%;
+}
+nav.desktopGnb1 li a,
+nav.desktopGnb2 li a {
+  display: block; /*크기(width, height)를 설정하기 위해서*/
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+nav.desktopGnb2 li a {
+  color: white;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+/*가상 선택자 ::after, ::before*/
+nav.desktopGnb2 li a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  transition: width 0.5s; /* hover 시 a 중앙에서부터 펼쳐지는 모션 */
+  margin: 0 auto;
+}
+nav.desktopGnb2 li:hover a::after {
+  width: 50%; /* 0 -> 50%*/
+  background-color: #f4cf02;
+}
+/*상단의 fixed black navi 한솥 로고 orange 선 없애기*/
+nav.desktopGnb2 li:first-child:hover a::after {
+  width: 0;
+}
+nav.desktopGnb1 li:hover a,
+nav.desktopGnb2 li:hover a {
+  color: #f4cf02;
+}
+nav.desktopGnb1 li h1,
+nav.desktopGnb2 li h1 {
+  text-indent: -999999px; /*텍스트 들여쓰기로 한솥 글자 보이지않게 만들었다.*/
+  background: url(../img/h1_logo.png) no-repeat center;
+  background-size: 90%;
+}
+nav.desktopGnb2 li h1 {
+  background: url(../img/bg_w_h1_logo.png) no-repeat center;
+  width: 30px;
+  height: 30px;
+  background-size: contain; /*이미지를 자르거나 늘리지 않고 영역내에서 이미지를 가능한 한 크게 조정*/
+  margin: 15px auto;
+}
