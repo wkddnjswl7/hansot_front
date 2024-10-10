@@ -7,7 +7,11 @@
 }
 body {
   width: 100%;
+<<<<<<< HEAD
   background-color: lightcoral;
+=======
+  background-color: red;
+>>>>>>> 79aac7a001ae12d4d77c9ded93ffc159abe7ae5a
 }
 #wrapper {
   font-family: "Noto Sans KR", sans-serif;
@@ -35,7 +39,11 @@ a {
 }
 #wrapper > p#login a {
   float: right;
+<<<<<<< HEAD
   color: white;
+=======
+  /* color:white  */
+>>>>>>> 79aac7a001ae12d4d77c9ded93ffc159abe7ae5a
   display: block;
 }
 /* 로그인(4)/회원가입(3)/인스타(2)/페이스북(1) */
@@ -47,7 +55,11 @@ a {
   width: 15px;
   height: 15px;
   margin-right: 5px;
+<<<<<<< HEAD
   margin-top: 2px;
+=======
+  margin-top: 3px;
+>>>>>>> 79aac7a001ae12d4d77c9ded93ffc159abe7ae5a
 }
 /* 페이스북 */
 #wrapper > p#login a:nth-of-type(1) {
@@ -156,6 +168,7 @@ nav.desktopGnb2 li h1 {
   background-size: contain; /*이미지를 자르거나 늘리지 않고 영역내에서 이미지를 가능한 한 크게 조정*/
   margin: 15px auto;
 }
+<<<<<<< HEAD
 
 /* **********************************************************/
 /* ************************ 반응형 쿼리 ************************/
@@ -256,3 +269,5 @@ nav.desktopGnb2 li h1 {
 /* 디바이스 장치가 최대 767px일 때 => 스마트폰 가로/세로용*/
 @media screen and (max-width: 767px) {
 }
+=======
+>>>>>>> 79aac7a001ae12d4d77c9ded93ffc159abe7ae5a
